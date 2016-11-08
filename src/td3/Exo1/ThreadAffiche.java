@@ -11,8 +11,10 @@ public class ThreadAffiche extends Thread {
 
     public void run(){
         try{
-            sleep(100);
-            nombre.afficheNombre();
+            while(!this.isInterrupted()){
+                sleep(150);
+                nombre.afficheNombre();
+            }
         }catch(Exception e){
             e.printStackTrace();
         }

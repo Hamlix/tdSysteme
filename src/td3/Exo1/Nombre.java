@@ -4,10 +4,10 @@ package td3.Exo1;
  * Created by galax on 08/11/2016.
  */
 public class Nombre {
-    private double n;
-    private double carre;
+    private int n;
+    private int carre;
 
-    public Nombre(double n) {
+    public Nombre(int n) {
         this.n = n;
         this.carre=n*n;
     }

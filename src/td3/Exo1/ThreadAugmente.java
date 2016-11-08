@@ -6,15 +6,27 @@ package td3.Exo1;
 public class ThreadAugmente extends Thread{
     private Nombre nombre;
     public ThreadAugmente(Nombre nombre){
+        super();
         this.nombre=nombre;
     }
 
     public void run(){
         try{
-            sleep(50);
-            nombre.incrementNombre();
+            while(!this.isInterrupted()){
+                sleep(100);
+                nombre.incrementNombre();
+            }
         }catch(Exception e){
             e.printStackTrace();
         }
+       /*while(!this.isInterrupted()){
+           try{
+               sleep(100);
+               nombre.incrementNombre();
+           }catch (Exception e){
+               e.printStackTrace();
+               break;
+           }
+       }*/
     }
 }
